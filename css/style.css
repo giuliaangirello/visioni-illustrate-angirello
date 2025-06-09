@@ -495,88 +495,77 @@ border-radius: 50%;
 
 
 
-nav {
-  position: relative;
+/* === STILE BASE (DESKTOP) === */
+
+/* Esempio titoli e testi */
+h1, .titolo {
+    font-size: 60px; /* o il valore originale */
 }
 
-nav ul.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding-left: 0;
-  margin: 0;
+p, .testo {
+    font-size: 20px; /* o il valore originale */
 }
 
-nav ul.nav-links li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.burger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-  width: 25px;
-  height: 21px;
-  justify-content: center;
-}
-
-.burger div {
-  background-color: black;
-  height: 3px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  nav ul.nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px; /* sotto header */
-    right: 0;
-    background-color: #f5f5f5;
-    width: 200px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 4px;
-  }
-
-  nav ul.nav-links.active {
-    display: flex;
-  }
-
-  .burger {
-    display: flex;
-  }
-}
-
-.burger.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.burger.toggle .line2 {
-  opacity: 0;
-}
-
-.burger.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  h1, .titolo, .sottotitolo {
-    font-size: 36px;
-  }
-
-  .grid {
+/* Griglia immagini */
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
+    grid-template-columns: repeat(4, 1fr); /* esempio desktop a 4 colonne */
+    gap: 20px;
+}
+
+/* Burger menu hidden su desktop */
+.burger {
+    display: none;
+}
+
+/* NAV desktop */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+
+    /* Titoli più piccoli */
+    h1, .titolo {
+        font-size: 36px;
+    }
+
+    /* Testo più piccolo */
+    p, .testo {
+        font-size: 16px;
+    }
+
+    /* Griglia immagini: 2 colonne */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mostra burger menu */
+    .burger {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Nascondi nav links */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    /* Mostra nav quando il burger è attivo */
+    nav.active ul {
+        display: flex;
+    }
 }
