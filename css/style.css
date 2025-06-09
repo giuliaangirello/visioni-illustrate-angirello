@@ -495,54 +495,52 @@ border-radius: 50%;
 
 
 
-/* === STILE BASE (DESKTOP) === */
 
-/* Esempio titoli e testi */
 h1, .titolo {
-    font-size: 60px; /* o il valore originale */
+    font-size: 60px;
 }
 
 p, .testo {
-    font-size: 20px; /* o il valore originale */
+    font-size: 20px; 
 }
 
-/* Griglia immagini */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* esempio desktop a 4 colonne */
     gap: 20px;
 }
 
-/* Burger menu hidden su desktop */
+
 .burger {
     display: none;
 }
 
-/* NAV desktop */
+
 nav ul {
     display: flex;
     gap: 20px;
 }
 
-/* === RESPONSIVE === */
+
 @media screen and (max-width: 768px) {
 
-    /* Titoli più piccoli */
+
     h1, .titolo {
         font-size: 36px;
     }
 
-    /* Testo più piccolo */
+
     p, .testo {
         font-size: 16px;
     }
 
-    /* Griglia immagini: 2 colonne */
+
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Mostra burger menu */
+
     .burger {
         display: block;
         cursor: pointer;
@@ -552,7 +550,7 @@ nav ul {
         right: 20px;
     }
 
-    /* Nascondi nav links */
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -564,7 +562,7 @@ nav ul {
         padding: 10px;
     }
 
-    /* Mostra nav quando il burger è attivo */
+   
     nav.active ul {
         display: flex;
     }

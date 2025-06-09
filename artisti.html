@@ -13,6 +13,9 @@
 <body>
     <header>
         <p>visioni illustrate</p>
+        <div class="burger">
+    <i class="fas fa-bars"></i>
+</div>
     <nav>
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -111,6 +114,14 @@
 </div>
 </footer>
 
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
