@@ -41,6 +41,8 @@ font-family: "Limelight", sans-serif;
   font-style: normal;
 }
 
+
+
 .paragrafo p {
 padding-left: 180px; 
 font-family: "Inter", sans-serif;
@@ -167,7 +169,7 @@ header {
   .desktop .la-mostra-visioni {
     position: absolute;
     width: 652px;
-    top: 752px;
+    top: 600px;
     left: 394px;
     font-family: "Inter-Regular", Helvetica;
     font-weight: 400;
@@ -195,7 +197,7 @@ header {
   
   .desktop .overlap {
     height: 1025px;
-    top: 992px;
+    top: 780px;
     position: absolute;
     width: 1440px;
     left: 0;
@@ -204,6 +206,7 @@ header {
  
   .desktop .artisti-in-mostra {
     position: absolute;
+   
     top: 0px;
     left: 226px;
     font-family: roca, sans-serif;
@@ -484,6 +487,12 @@ border-radius: 50%;
 .footerbottom p{
   color: #fcf1e3;
 }
+
+
+
+
+
+
 
 
 
